@@ -87,7 +87,7 @@ case ${chosen} in
 		run_cmd --shutdown
         ;;
     $reboot)
-		run_cmd --reboot
+		bspc wm -r
         ;;
     $lock)
 		if [[ -x '/usr/bin/betterlockscreen' ]]; then

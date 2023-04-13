@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#/usr/bin/env sh
 
 ## Add this to your wm startup file.
 
@@ -10,11 +10,12 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 ## Launch
 
-## Time bar
-polybar time -c ~/.config/polybar/current.ini &
+## Right Bars
+polybar power -c ~/.config/polybar/black.ini &
+polybar multimedia -c ~/.config/polybar/black.ini &
+polybar audio -c ~/.config/polybar/black.ini &
 
-## PowerOff bar
-polybar power -c ~/.config/polybar/current.ini &
+## Left bars
+polybar primary -c ~/.config/polybar/white.ini &
+polybar date -c ~/.config/polybar/white.ini &
 
-## Center bar
-polybar primary -c ~/.config/polybar/workspace.ini &
